@@ -1,0 +1,42 @@
+/*
+MY COLOR PALETTE
+Orange - #f9a03f
+Dark-purple - #31081f
+Red-orange - #d00000
+Dove - #fafaff
+Pale-purple - #e4d9ff
+*/
+
+body {
+    background-color: #31081f;
+    color: #f9a03f;
+    text-align: center
+}
+
+button {
+    background-color: #f9a03f;
+    color: #31081f;
+    font-family: "Source Sans 3", sans-serif; 
+    text-transform: uppercase;
+    width: 100px;
+    padding: 10px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #fafaff; 
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: normal;
+}
