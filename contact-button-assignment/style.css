@@ -8,35 +8,39 @@ Pale-purple - #e4d9ff
 */
 
 body {
-    background-color: #31081f;
-    color: #f9a03f;
+    background-color: #e4d9ff;
+    color: #31081f;
     text-align: center
 }
 
 button {
-    background-color: #f9a03f;
-    color: #31081f;
-    font-family: "Source Sans 3", sans-serif; 
+    background-color: #d00000;
+    color: #fafaff;
+    font-family: "Monda", sans-serif; 
     text-transform: uppercase;
-    width: 100px;
+    width: 150px;
     padding: 10px;
     margin-top: 50px;
     border: none;
     border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #fafaff; 
+    background-color: #f9a03f; 
+    transform: scale(1.1);
 }
 
 h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Julius Sans One", sans-serif;
     font-weight: 400px;
-    font-style: italic;
-    letter-spacing: 1px;
+    font-style: normal;
+    letter-spacing: 0.5px;
 }
 
 h2 {
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: normal;
+    font-family: "Monda", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
