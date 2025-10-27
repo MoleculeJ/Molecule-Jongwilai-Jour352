@@ -7,6 +7,10 @@ White Smoke: #f2f4f3 */
 
 @media screen {
     /* page-1 */
+    html {
+        scroll-behavior: smooth;
+    }
+    
     #page-1 {
         background-color: #f7ebec;
     }
@@ -64,6 +68,10 @@ White Smoke: #f2f4f3 */
         text-decoration: none;
     }
     
+    #name-title a {
+        text-decoration: none;
+    }
+    
     #name-title button:hover {
         background-color: #4b0082;
         transform: scale(1.1);
@@ -80,6 +88,14 @@ White Smoke: #f2f4f3 */
         color: #f7ebec;
         text-align: center;
         padding: 10px;
+    }
+    
+     #nav-bar h3:hover {
+        color: #4b0082;
+    }
+    
+    #nav-bar a {
+        text-decoration: none;
     }
 
     /* page-2 */
@@ -222,6 +238,17 @@ White Smoke: #f2f4f3 */
         padding-right: 50px;
         margin-top: 20px;
         margin-bottom: 40px;
+    }
+    
+    /* footer */
+    footer {
+        margin: 0;
+        background-color: #a675a1;
+        padding: 10px;
+        padding-left: 20px;
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        color: #f7ebec; 
     }
 }
 
