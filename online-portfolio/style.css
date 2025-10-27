@@ -1,3 +1,232 @@
-img {
-    width: 100%;
+/* color
+Russian Violet: #2F0147
+Indigo: #4b0082
+African Violet: #a675a1
+Lavender Blush: #f7ebec
+White Smoke: #f2f4f3 */
+
+@media screen {
+    /* page-1 */
+    #page-1 {
+        background-color: #f7ebec;
+    }
+
+    img {
+        display: block;
+        width: 85%;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #name-title {
+        padding-top: 30px;
+    }
+
+    #name-title h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 90px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: #4b0082;
+    }
+
+    #name-title h2 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 2em;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: #4b0082;
+    }
+
+    #name-title button {
+        text-align: center;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 75px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #a675a1;
+        color: #f7ebec;
+        border: none;
+        transition: transform 0.3s, background-color 0.3s ease;
+        text-decoration: none;
+    }
+    
+    #name-title button:hover {
+        background-color: #4b0082;
+        transform: scale(1.1);
+    }
+
+    /* nav bar*/
+    #nav-bar {
+        margin-top: 60px;
+        background-color: #a675a1;
+    }
+
+    #nav-bar h3 {
+        font-family: "Roboto", sans-serif;
+        color: #f7ebec;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* page-2 */
+    #page-2 {
+        padding-top: 50px;
+        padding-bottom: 25px;
+        background-color: #2f0147;
+        color: #f7ebec;
+    }
+
+    #page-2 h4 {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 2em;
+    }
+
+    #page-2 hr {
+        border: solid 2px #f7ebec;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .job-title {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5em;
+        color: #a675a1;
+        font-weight: 500;
+    }
+
+    .job-loca {
+        font-family: "Roboto", sans-serif;
+        font-size: 1em;
+        font-style: italic;
+    }
+
+    .job-date {
+        font-family: "Roboto", sans-serif;
+        font-size: 1em;
+    }
+
+    .job-des {
+        font-family: "Cambo", serif;
+        font-size: 1em;
+        text-align: left;
+    }
+
+    #job-1 {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    #job-2 {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 40px;
+    }
+
+    #job-3 {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 40px;
+    }
+
+    /* page-3 */
+    #page-3 {
+        padding-top: 0px;
+        padding-bottom: 50px;
+        background-color: #2f0147;
+        color: #f7ebec;
+    }
+
+    #page-3 h4 {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 2em;
+    }
+
+    #page-3 hr {
+        border: solid 2px #f7ebec;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    ul {
+        padding-left: 65px;
+    }
+    
+    /* page-4 */
+    #page-4 {
+        padding-top: 0px;
+        padding-bottom: 25px;
+        background-color: #2f0147;
+        color: #f7ebec;
+    }
+
+    #page-4 h4 {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 2em;
+    }
+    
+    #page-4 hr {
+        border: solid 2px #f7ebec;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .degree {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5em;
+        color: #a675a1;
+        font-weight: 500;
+    }
+
+    .school {
+        font-family: "Roboto", sans-serif;
+        font-size: 1em;
+        font-style: italic;
+    }
+
+    .date {
+        font-family: "Roboto", sans-serif;
+        font-size: 1em;
+    }
+    
+    #edu1 {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    #edu2 {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:576px) {
+    #name-title h1 {
+        font-size: 3em;
+    }
 }
