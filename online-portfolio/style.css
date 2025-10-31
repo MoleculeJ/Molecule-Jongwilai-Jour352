@@ -10,7 +10,7 @@ White Smoke: #f2f4f3 */
     html {
         scroll-behavior: smooth;
     }
-    
+
     #page-1 {
         background-color: #f7ebec;
     }
@@ -64,14 +64,16 @@ White Smoke: #f2f4f3 */
         background-color: #a675a1;
         color: #f7ebec;
         border: none;
-        transition: transform 0.3s, background-color 0.3s ease;
+        transition:
+            transform 0.3s,
+            background-color 0.3s ease;
         text-decoration: none;
     }
-    
+
     #name-title a {
         text-decoration: none;
     }
-    
+
     #name-title button:hover {
         background-color: #4b0082;
         transform: scale(1.1);
@@ -89,11 +91,11 @@ White Smoke: #f2f4f3 */
         text-align: center;
         padding: 10px;
     }
-    
-     #nav-bar h3:hover {
+
+    #nav-bar h3:hover {
         color: #4b0082;
     }
-    
+
     #nav-bar a {
         text-decoration: none;
     }
@@ -114,7 +116,7 @@ White Smoke: #f2f4f3 */
 
     #page-2 hr {
         border: solid 2px #f7ebec;
-        width: 60vw;
+        width: 40vw;
         margin-left: auto;
         margin-right: auto;
     }
@@ -144,21 +146,21 @@ White Smoke: #f2f4f3 */
     }
 
     #job-1 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
         margin-top: 20px;
         margin-bottom: 40px;
     }
 
     #job-2 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
         margin-bottom: 40px;
     }
 
     #job-3 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
         margin-bottom: 40px;
     }
 
@@ -178,15 +180,16 @@ White Smoke: #f2f4f3 */
 
     #page-3 hr {
         border: solid 2px #f7ebec;
-        width: 60vw;
+        width: 40vw;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     ul {
-        padding-left: 65px;
+        margin-top: 20px;
+        padding-left: 115px;
     }
-    
+
     /* page-4 */
     #page-4 {
         padding-top: 0px;
@@ -200,14 +203,14 @@ White Smoke: #f2f4f3 */
         font-family: "Roboto", sans-serif;
         font-size: 2em;
     }
-    
+
     #page-4 hr {
         border: solid 2px #f7ebec;
-        width: 60vw;
+        width: 40vw;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .degree {
         font-family: "Roboto", sans-serif;
         font-size: 1.5em;
@@ -225,35 +228,104 @@ White Smoke: #f2f4f3 */
         font-family: "Roboto", sans-serif;
         font-size: 1em;
     }
-    
+
     #edu1 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
         margin-top: 20px;
         margin-bottom: 40px;
     }
-    
+
     #edu2 {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
         margin-top: 20px;
         margin-bottom: 40px;
     }
-    
+
     /* footer */
     footer {
         margin: 0;
         background-color: #a675a1;
         padding: 10px;
-        padding-left: 20px;
+        padding-left: 50px;
         font-family: "Roboto", sans-serif;
         font-style: italic;
-        color: #f7ebec; 
+        color: #f7ebec;
     }
 }
 
-@media (max-width:576px) {
+@media (max-width: 992px) {
     #name-title h1 {
-        font-size: 3em;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    #name-title h1 {
+        font-size: 50px;
+    }
+
+    img {
+        width: 110%;
+    }
+}
+
+@media (max-width: 576px) {
+    #name-title h1 {
+        font-size: 40px;
+    }
+
+    img {
+        width: 70%;
+    }
+
+    #name-title h2 {
+        font-size: 30px;
+    }
+
+    #page-2 hr {
+        width: 60vw;
+    }
+
+    #job-1 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #job-2 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #job-3 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #page-3 hr {
+        width: 60vw;
+    }
+
+    ul {
+        padding-left: 30px;
+    }
+
+    #page-4 hr {
+        width: 60vw;
+    }
+
+    #edu1 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #edu2 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer {
+        padding-left: 20px;
     }
 }

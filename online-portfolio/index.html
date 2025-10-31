@@ -49,52 +49,57 @@
             <div class="row">
                 <div class="col">
                     <h4>EXPERIENCE</h4>
-                    <hr>
+                    <hr />
                 </div>
             </div>
 
             <div class="row" id="job-1">
-                <div class="col-6">
+                <div class="col-sm-6">
                     <p class="job-title">Data Storyteller, Project Manager</p>
                     <p class="job-loca">Punch Up World Co., Ltd, Bangkok, Thailand</p>
                     <p class="job-date">Apr. 2022 - Aug. 2024</p>
                 </div>
-                <div class="col-6">
-                    <p class="job-des"> I investigate, gather, and analyze data related to social issues and turn them into written content in an understandable and compelling way. I also work closely with a data designer and software developer to visualize data into a comprehensible and interesting presentation.</p>
+                <div class="col-sm-6">
+                    <p class="job-des">
+                        I investigate, gather, and analyze data related to social issues and turn them into written
+                        content in an understandable and compelling way. I also work closely with a data designer and
+                        software developer to visualize data into a comprehensible and interesting presentation.
+                    </p>
                 </div>
             </div>
-            
+
             <div class="row" id="job-2">
-                <div class="col-6">
+                <div class="col-sm-6">
                     <p class="job-title">Data Journalist, Content Creator</p>
-                    <p class="job-loca">Thai Public Broadcasting Service (Thai PBS), 
-Bangkok, Thailand</p>
+                    <p class="job-loca">Thai Public Broadcasting Service (Thai PBS), Bangkok, Thailand</p>
                     <p class="job-date">Jul. 2019 - Mar. 2022</p>
                 </div>
-                <div class="col-6">
-                    <p class="job-des">I initiated data journalism projects, including investigating, gathering, and analyzing data. I write short news, articles, and documentaries regarding foreign affairs topics, and also produce and edit short and long-form video news content.</p>
+                <div class="col-sm-6">
+                    <p class="job-des">
+                        I initiated data journalism projects, including investigating, gathering, and analyzing data. I
+                        write short news, articles, and documentaries regarding foreign affairs topics, and also produce
+                        and edit short and long-form video news content.
+                    </p>
                 </div>
             </div>
-            
+
             <div class="row" id="job-3">
-                <div class="col-6">
-                    <p class="job-title">Freelance Writer </p>
+                <div class="col-sm-6">
+                    <p class="job-title">Freelance Writer</p>
                     <p class="job-loca">The Standard Pop, Bangkok, Thailand</p>
                     <p class="job-date">Nov. 2018 - Mar 2020</p>
                 </div>
-                <div class="col-6">
-                    <p class="job-des">I write articles regarding pop culture, music, film, art, and literature.
-
-</p>
+                <div class="col-sm-6">
+                    <p class="job-des">I write articles regarding pop culture, music, film, art, and literature.</p>
                 </div>
             </div>
         </div>
-        
+
         <div class="container-fluid" id="page-3">
             <div class="row">
                 <div class="col">
                     <h4>SKILLS</h4>
-                    <hr>
+                    <hr />
                 </div>
             </div>
 
@@ -110,12 +115,12 @@ Bangkok, Thailand</p>
                 </div>
             </div>
         </div>
-        
+
         <div class="container-fluid" id="page-4">
             <div class="row">
                 <div class="col">
-                    <h4>Education</h4>
-                    <hr>
+                    <h4>EDUCATION</h4>
+                    <hr />
                 </div>
             </div>
 
@@ -126,7 +131,7 @@ Bangkok, Thailand</p>
                     <p class="date">2026</p>
                 </div>
             </div>
-            
+
             <div class="row" id="edu2">
                 <div class="col">
                     <p class="degree">Bachelor of Arts, Communication Artse</p>
@@ -138,5 +143,23 @@ Bangkok, Thailand</p>
         <footer>
             <p>Copyright 2025 | Molecule Jongwilai</p>
         </footer>
+
+        <!-- I added this script to make sure the page always loads at the top after a refresh. -->
+        <script>
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            window.addEventListener("load", function () {
+                window.scrollTo(0, 0);
+                if (location.hash) {
+                    history.replaceState(null, document.title, location.pathname + location.search);
+                }
+            });
+
+            window.addEventListener("beforeunload", function () {
+                window.scrollTo(0, 0);
+            });
+        </script>
     </body>
 </html>
