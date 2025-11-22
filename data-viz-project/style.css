@@ -1,0 +1,63 @@
+/* color 
+midnight violet: #32021F
+golden bronze: #CCA43B
+Berry Lipstick: #C62E65
+Powder Blush: #F7B2AD
+Neon Violet: #D63AF9 */
+
+
+body {
+    background-color: #32021F;
+    color: #CCA43B;
+}
+
+#cover {
+    display: flex;
+    background-image: url("pic1.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+#headline {
+    background-color: #32021F;
+    align-self: center;
+    width: 60vw;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-family: "Mulish", sans-serif;
+}
+
+#article {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+    font-family: "Mulish", sans-serif;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.chart {
+    margin-top: 35px;
+}

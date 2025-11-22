@@ -1,0 +1,72 @@
+---
+title: "women_olympics_datawork"
+output: html_document
+---
+
+```{r}
+#Call Libraries
+library(tidyverse)
+library(janitor)
+```
+
+```{r}
+#Import data 
+
+women_olympics <- read_csv("women_olympics.csv")
+```
+```{r}
+#Chart1 
+
+#Create woman count column 
+women_olympics <- women_olympics |>
+  mutate(woman = case_when(
+    Sex == "F" ~ 1,
+    TRUE ~ 0
+  ))
+
+#Create men count column 
+women_olympics <- women_olympics |>
+  mutate(man = case_when(
+    Sex == "M" ~ 1,
+    TRUE ~ 0
+  ))
+
+
+#Find athlete each year and women and man
+chart1 <- women_olympics |>
+  group_by(Year) |>
+  summarise(
+    athlete_each_year = n(),
+    man = sum(man),
+    woman = sum(woman)
+  )
+
+#Side quest -> find sum all athlete
+chart1 |>
+  summarise(
+    all_athlete = sum(athlete_each_year)
+  )
+
+chart1 <- chart1 |>
+  mutate(percent_year = (athlete_each_year/271116)*100) |>
+  mutate(total = man + woman) |>
+  mutate(percentage_man = (man/total)*100) |>
+  mutate(percentage_woman = (woman/total)*100)
+
+chart1 |> write_csv("chart1.csv")
+```
+
+```{r}
+#Chart2
+
+chart2 <- women_olympics |>
+  group_by(Team) |>
+  summarise(
+    no_all_athlete = n(),
+    no_women = sum(woman)
+  ) |>
+  mutate(percen_women = no_women/no_all_athlete*100)
+
+chart2 |> write_csv("chart2.csv")
+```
+
