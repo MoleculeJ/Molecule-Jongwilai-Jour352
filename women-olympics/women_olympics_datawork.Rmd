@@ -70,3 +70,16 @@ chart2 <- women_olympics |>
 chart2 |> write_csv("chart2.csv")
 ```
 
+```{r}
+#Chart3
+
+chart3 <- women_olympics |>
+  filter(Sex == "F") |>
+  group_by(Sport) |>
+  summarise(
+    no_woman = n()
+  ) 
+
+chart3 |> write_csv("chart3.csv")
+```
+

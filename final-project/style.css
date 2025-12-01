@@ -1,0 +1,127 @@
+/* Color
+RED #C71E1D
+BLUE #1979b9
+ORANGE #FAA916 
+
+Font
+HEADLINE AND SOURCE: Source Serif 4
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+BYLINE, DATELINE, AND ALL LABELS: Poppins
+    font-family: "Poppins", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+/* default */
+body {
+    margin: 0;
+    font-family: 'Poppins', san-serif;
+    color: black; 
+    scroll-behavior: smooth;
+}
+
+/* topper */
+.topper {
+    min-height: 100vh;
+    display: flex;
+    background-image: url('topper1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    background: #0D0628;
+    padding: auto;
+}
+
+#logo {
+  width:270px;
+  padding-left: 50px;
+  padding-top: 4px;
+}
+
+#headline {
+    font-family: "Source Serif 4", serif;
+    font-size: 2.75em;
+    font-weight: 600;
+    padding-top: 10%;
+    padding-left: 50px;
+}
+
+#disclaimer {
+    font-family: "Poppins", sans-serif;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+/* section1 */
+#caption1 {
+    font-size: 0.75em;
+    margin-left: 10px;
+}
+
+#byline {
+    font-size: 0.85em;
+}
+
+.section1 p {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section1 {
+    padding-bottom: 25px;
+}
+
+/* section2 */
+.section2 {
+    min-height: 100vh;
+    display: flex;
+    background-image: url('map1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -125px;
+    justify-content: center;
+}
+
+.section2 div {
+    background-color: white;
+    position: absolute;
+    padding: 10px;
+    padding-bottom: 15px;
+    align-self: center;
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+} 
+
+#chart1 {
+    height: 40vh;
+}
+
+#chart1-caption {
+    font-size: 0.75em;
+}
+
+button {
+    font-size: 0.75em;
+    background-color: #C71E1D;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
