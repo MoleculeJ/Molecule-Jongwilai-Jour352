@@ -15,290 +15,316 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     font-style: normal;
 */
 
-/* default */
-body {
-    margin: 0;
-    font-family: "Poppins", san-serif;
-    color: black;
-    scroll-behavior: smooth;
+@media screen {
+    /* default */
+    body {
+        margin: 0;
+        font-family: "Poppins", san-serif;
+        color: black;
+        scroll-behavior: smooth;
+    }
+
+    /* -------------------------topper---------------------- */
+    .topper {
+        min-height: 100vh;
+        display: flex;
+        background-image: url("topper2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 5;
+        background: #0d0628;
+        padding: auto;
+    }
+
+    #logo {
+        width: 270px;
+        padding-left: 50px;
+        padding-top: 4px;
+    }
+
+    #headline {
+        font-family: "Source Serif 4", serif;
+        font-size: 2.8em;
+        font-weight: 700;
+        padding-top: 10%;
+        padding-left: 50px;
+    }
+
+    #disclaimer {
+        font-family: "Poppins", sans-serif;
+        padding-left: 50px;
+        margin-top: 20px;
+        font-size: 1em;
+    }
+
+    /* -------------------------Section 1---------------------- */
+    #caption1 {
+        font-size: 0.65em;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+
+    #byline {
+        font-size: 0.85em;
+        margin-top: 30px;
+    }
+
+    .section1 p {
+        width: 50vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section1 {
+        padding-bottom: 25px;
+    }
+
+    /* -------------------------Section 2---------------------- */
+    .section2 {
+        min-height: 1250vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: url("map1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center -125px;
+        position: relative;
+        background-attachment: fixed;
+        transition: background-image 0.6s ease-in-out;
+    }
+
+    .section2.bg-alt1 {
+        background-image: url("map2.png");
+    }
+
+    .section2.bg-alt2 {
+        background-image: url("map3.png");
+    }
+
+    .section2.bg-alt3 {
+        background-image: url("map4.png");
+    }
+
+    .section2.bg-alt4 {
+        background-image: url("map5.png");
+    }
+
+    .section2.bg-alt5 {
+        background-image: url("map6.png");
+    }
+
+    .section2.bg-alt6 {
+        background-image: url("map7.png");
+    }
+
+    .section2.bg-alt7 {
+        background-image: url("map8.png");
+    }
+
+    .section2.bg-alt8 {
+        background-image: url("map9.png");
+    }
+
+    .section2 .card1 {
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 15px;
+        width: 50vw;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 125px;
+    }
+
+    .chart-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+    }
+
+    #chart1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* ★ match wrapper exactly */
+        height: 100%; /* ★ match wrapper exactly */
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    /* put the canvas exactly over the img */
+    #drawLayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* ★ match wrapper */
+        z-index: 2;
+        pointer-events: auto;
+    }
+
+    #chart1-answer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* ★ match wrapper exactly */
+        height: 100%; /* ★ match wrapper exactly */
+        object-fit: contain;
+        z-index: 3;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #chart1-caption {
+        font-size: 0.75em;
+    }
+
+    button {
+        font-size: 0.75em;
+        background-color: #c71e1d;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section2 .card2 {
+        background-color: white;
+        padding: 20px;
+        padding-top: 25px;
+        width: 50vw;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 250px; /* spacing below card1 */
+        position: static; /* default */
+    }
+
+    .map-chart {
+        width: 100%;
+    }
+
+    .map-continent {
+        width: 60%;
+    }
+
+    .section2 .maryland-card {
+        background-image: url("maryland-map.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+        padding: 20px;
+        padding-top: 25px;
+        width: 50vw;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 250px; /* spacing below card1 */
+        position: static; /* default */
+    }
+
+    .section2 .continent-card {
+        background-color: rgba(250, 250, 250, 0.85);
+        padding: 20px;
+        padding-top: 25px;
+        width: 50vw;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 250px; /* spacing below card1 */
+        position: static; /* default */
+    }
+
+    .section2 .card13 {
+        background-color: rgba(250, 250, 250, 0.85);
+        padding: 20px;
+        padding-top: 25px;
+        width: 50vw;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 250px; /* spacing below card1 */
+        position: static; /* default */
+    }
+
+    #bubble-container {
+        background-color: rgba(250, 250, 250, 0);
+        height: 425px; /* container height */
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center; /* vertical centering */
+        justify-content: center; /* optional, horizontal centering */
+    }
+
+    /* -------------------------Section 3---------------------- */
+    .section3 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section3 p {
+        width: 50vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section3 hr {
+        opacity: 1 !important;
+        width: 55vw;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        height: 10px;
+        background-color: black;
+    }
+
+    .section3 img {
+        width: 50vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section3 #caption2,
+    .section3 #caption3 {
+        font-size: 0.65em;
+        margin-top: 7px;
+    }
 }
 
-/* -------------------------topper---------------------- */
-.topper {
-    min-height: 100vh;
-    display: flex;
-    background-image: url("topper2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
+@media (min-width: 1920px) {
+    #headline {
+        font-size: 5em;     
+        padding-left: 150px;
+    }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 5;
-    background: #0d0628;
-    padding: auto;
-}
-
-#logo {
-    width: 270px;
-    padding-left: 50px;
-    padding-top: 4px;
-}
-
-#headline {
-    font-family: "Source Serif 4", serif;
-    font-size: 2.8em;
-    font-weight: 700;
-    padding-top: 10%;
-    padding-left: 50px;
-}
-
-#disclaimer {
-    font-family: "Poppins", sans-serif;
-    padding-left: 50px;
-    margin-top: 20px;
-    font-size: 1em;
-}
-
-/* -------------------------Section 1---------------------- */
-#caption1 {
-    font-size: 0.75em;
-    margin-left: 10px;
-}
-
-#byline {
-    font-size: 0.85em;
-}
-
-.section1 p {
-    width: 50vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section1 {
-    padding-bottom: 25px;
-}
-
-/* -------------------------Section 2---------------------- */
-.section2 {
-    min-height: 1235vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-image: url("map1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center -125px;
-    position: relative;
-    background-attachment: fixed;
-    transition: background-image 0.6s ease-in-out;
-}
-
-.section2.bg-alt1 {
-    background-image: url("map2.png");
-}
-
-.section2.bg-alt2 {
-    background-image: url("map3.png");
-}
-
-.section2.bg-alt3 {
-    background-image: url("map4.png");
-}
-
-.section2.bg-alt4 {
-    background-image: url("map5.png");
-}
-
-.section2.bg-alt5 {
-    background-image: url("map6.png");
-}
-
-.section2.bg-alt6 {
-    background-image: url("map7.png");
-}
-
-.section2.bg-alt7 {
-    background-image: url("map8.png");
-}
-
-.section2.bg-alt8 {
-    background-image: url("map9.png");
-}
-
-.section2 .card1 {
-    background-color: white;
-    padding: 10px;
-    padding-bottom: 15px;
-    width: 50vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 125px;
-}
-
-.chart-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-}
-
-#chart1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* ★ match wrapper exactly */
-    height: 100%; /* ★ match wrapper exactly */
-    object-fit: contain;
-    z-index: 1;
-}
-
-/* put the canvas exactly over the img */
-#drawLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* ★ match wrapper */
-    z-index: 2;
-    pointer-events: auto;
-}
-
-#chart1-answer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* ★ match wrapper exactly */
-    height: 100%; /* ★ match wrapper exactly */
-    object-fit: contain;
-    z-index: 3;
-}
-
-.hidden {
-    display: none;
-}
-
-#chart1-caption {
-    font-size: 0.75em;
-}
-
-button {
-    font-size: 0.75em;
-    background-color: #c71e1d;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.section2 .card2 {
-    background-color: white;
-    padding: 20px;
-    padding-top: 25px;
-    width: 50vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 250px; /* spacing below card1 */
-    position: static; /* default */
-}
-
-.map-chart {
-    width: 100%;
-}
-
-.map-continent {
-    width: 60%;
-}
-
-.section2 .maryland-card {
-    background-image: url("maryland-map.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-    padding: 20px;
-    padding-top: 25px;
-    width: 50vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 250px; /* spacing below card1 */
-    position: static; /* default */
-}
-
-.section2 .continent-card {
-    background-color: rgba(250, 250, 250, 0.85);
-    padding: 20px;
-    padding-top: 25px;
-    width: 50vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 250px; /* spacing below card1 */
-    position: static; /* default */
-}
-
-.section2 .card13 {
-    background-color: rgba(250, 250, 250, 1);
-    padding: 20px;
-    padding-top: 25px;
-    width: 50vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 250px; /* spacing below card1 */
-    position: static; /* default */
-}
-
-#bubble-container {
-    background-color: rgba(250, 250, 250, 1);
-    height: 400px; /* container height */
-    width: 600px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center; /* vertical centering */
-    justify-content: center; /* optional, horizontal centering */
-}
-
-/* -------------------------Section 3---------------------- */
-.section3 {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.section3 p {
-    width: 50vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section3 hr {
-    opacity: 1 !important;
-    width: 55vw;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    height: 10px;
-    background-color: black;
-}
-
-.section3 img {
-    width: 50vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section3 #caption2,
-.section3 #caption3 {
-    font-size: 0.75em;
+    #disclaimer {
+        padding-left: 150px;
+    }
+    
+    .section2 {
+        min-height: 870vh;
+    }
+    
+    #bubble-container {
+        height: 600px; /* container height */
+        width: 850px;
+    }
+    
 }

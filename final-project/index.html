@@ -69,7 +69,7 @@
         </section>
 
         <section class="section1">
-            <p id="caption1">Caption go here....</p>
+            <p id="caption1">COLLEGE PARK - The M circle, University of Maryland, College Park's campus (Molecule Jongwilai/Capital News Service)</p>
             <p id="byline">
                 <b>Story by Sophia da Silva</b><br /><b>Data and Web Design by Molecule Jongwilai</b><br />Published Dec
                 5, 2024
@@ -371,11 +371,27 @@
 
             <div class="card13">
                 <p>
-                    <b>NEW SUMMARY GO HERE...</b>
+                    <b>The number of internationl students from most countries decreased in Fall 2025.</b><br>
+                    Click on a bubble for more details<br>
+                    <span style="font-size: 0.65em; font-style: italic;">This chart includes only countries with student enrollment of 10 or more in Fall 2024 and Fall 2025 for sensible comparability.</span>
                 </p>
                 <div id="bubble-container"></div>
             </div>
         </section>
+        <div
+            id="tooltip"
+            style="
+                position: absolute;
+                padding: 6px 10px;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                font-family: &quot;poppins&quot;;
+                font-size: 13px;
+                border-radius: 7px;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.05s;
+            "></div>
 
         <section class="section3">
             <p>
@@ -465,7 +481,7 @@
                 as their education progresses.  
             </p>
             <img src="pic2.jpg" />
-            <p id="caption3">Caption go here....</p>
+            <p id="caption3">COLLEGE PARK - International Student and Scholar Services office, University of Maryland, College Park (Molecule Jongwilai/Capital News Service).</p>
             <p style="margin-top: 35px">
                 “There's already situations on campus where labs are kind of toxic environments for one reason or
                 another, and switching labs has saved people's careers,” said Ying, who is currently a sixth-year
@@ -745,127 +761,53 @@
         </script>
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
-
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 // ---------------- DATA ----------------
                 const data = [
-                    { country: "Afghanistan", value: 100.0, r: 1 },
-                    { country: "Albania", value: 0.0, r: 0 },
-                    { country: "Algeria", value: -50.0, r: 1 },
-                    { country: "Argentina", value: -75.0, r: 9 },
-                    { country: "Armenia", value: 100.0, r: 1 },
-                    { country: "Australia", value: -88.24, r: 15 },
-                    { country: "Austria", value: 0.0, r: 0 },
-                    { country: "Azerbaijan", value: -100.0, r: 13 },
-                    { country: "Bahamas", value: 100.0, r: 1 },
-                    { country: "Bangladesh", value: 2.14, r: 4 },
-                    { country: "Belgium", value: -100.0, r: 1 },
-                    { country: "Benin", value: 100.0, r: 1 },
-                    { country: "Bermuda", value: -50.0, r: 1 },
-                    { country: "Bosnia and Herzegovina", value: 0.0, r: 0 },
-                    { country: "Botswana", value: 100.0, r: 1 },
-                    { country: "Brazil", value: -2.56, r: 1 },
-                    { country: "Bulgaria", value: 0.0, r: 0 },
-                    { country: "Burkina Faso", value: -100.0, r: 1 },
-                    { country: "Cameroon", value: -20.0, r: 2 },
-                    { country: "Canada", value: -21.95, r: 18 },
-                    { country: "Chile", value: 5.26, r: 1 },
-                    { country: "China", value: 3.8, r: 64 },
-                    { country: "Colombia", value: -14.29, r: 5 },
-                    { country: "Congo", value: -25.0, r: 1 },
-                    { country: "Costa Rica", value: -100.0, r: 1 },
-                    { country: "Croatia", value: -100.0, r: 5 },
-                    { country: "Cyprus", value: 0.0, r: 0 },
-                    { country: "Czech Republic", value: 50.0, r: 1 },
-                    { country: "Denmark", value: -9.09, r: 2 },
-                    { country: "Dominican Republic", value: -50.0, r: 2 },
-                    { country: "Ecuador", value: 33.33, r: 1 },
-                    { country: "Egypt", value: -8.82, r: 3 },
-                    { country: "El Salvador", value: 7.14, r: 1 },
-                    { country: "Ethiopia", value: 0.0, r: 0 },
-                    { country: "France", value: -44.0, r: 11 },
-                    { country: "Gambia", value: -100.0, r: 1 },
-                    { country: "Georgia", value: 0.0, r: 0 },
-                    { country: "Germany", value: -48.15, r: 13 },
-                    { country: "Ghana", value: -3.06, r: 3 },
-                    { country: "Greece", value: -27.78, r: 5 },
-                    { country: "Grenada", value: -66.67, r: 2 },
-                    { country: "Guatemala", value: 25.0, r: 1 },
-                    { country: "Guyana", value: 0.0, r: 0 },
-                    { country: "Haiti", value: 0.0, r: 0 },
-                    { country: "Honduras", value: -14.29, r: 1 },
-                    { country: "Hong Kong", value: -39.13, r: 9 },
-                    { country: "Hungary", value: -75.0, r: 3 },
-                    { country: "India", value: -25.08, r: 779 },
-                    { country: "Indonesia", value: -36.36, r: 8 },
-                    { country: "Iran", value: -6.34, r: 9 },
-                    { country: "Ireland", value: -100.0, r: 1 },
-                    { country: "Israel", value: 50.0, r: 1 },
-                    { country: "Italy", value: -16.0, r: 4 },
-                    { country: "Ivory Coast", value: -33.33, r: 1 },
-                    { country: "Jamaica", value: -10.0, r: 1 },
-                    { country: "Japan", value: -32.26, r: 10 },
-                    { country: "Jordan", value: -33.33, r: 1 },
-                    { country: "Kazakhstan", value: 0.0, r: 0 },
-                    { country: "Kenya", value: -50.0, r: 2 },
-                    { country: "Kosovo", value: 0.0, r: 0 },
-                    { country: "Lesotho", value: -50.0, r: 1 },
-                    { country: "Liberia", value: -50.0, r: 1 },
-                    { country: "Lithuania", value: -33.33, r: 1 },
-                    { country: "Malawi", value: -52.94, r: 9 },
-                    { country: "Malaysia", value: -100.0, r: 12 },
-                    { country: "Mexico", value: -18.52, r: 5 },
-                    { country: "Moldova", value: 0.0, r: 0 },
-                    { country: "Morocco", value: 0.0, r: 0 },
-                    { country: "Myanmar", value: 25.0, r: 2 },
-                    { country: "Nepal", value: 5.71, r: 4 },
-                    { country: "Netherlands", value: -5.26, r: 1 },
-                    { country: "New Zealand", value: -100.0, r: 1 },
-                    { country: "Nicaragua", value: -50.0, r: 1 },
-                    { country: "Nigeria", value: -7.69, r: 18 },
-                    { country: "Norway", value: 0.0, r: 0 },
-                    { country: "Pakistan", value: 23.61, r: 17 },
-                    { country: "Palestine", value: 0.0, r: 0 },
-                    { country: "Panama", value: -100.0, r: 1 },
-                    { country: "Peru", value: 60.0, r: 3 },
-                    { country: "Philippines", value: -23.08, r: 3 },
-                    { country: "Russia", value: -30.43, r: 7 },
-                    { country: "Rwanda", value: 0.0, r: 0 },
-                    { country: "Saint Kitts and Nevis", value: -100.0, r: 1 },
-                    { country: "Saudi Arabia", value: -1.82, r: 1 },
-                    { country: "Senegal", value: -100.0, r: 3 },
-                    { country: "Serbia", value: 0.0, r: 0 },
-                    { country: "Singapore", value: -40.63, r: 13 },
-                    { country: "South Africa", value: 0.0, r: 0 },
-                    { country: "South Korea", value: -3.94, r: 8 },
-                    { country: "Spain", value: 6.58, r: 5 },
-                    { country: "Sri Lanka", value: 7.55, r: 4 },
-                    { country: "St Vincent and the Grenadines", value: -100.0, r: 2 },
-                    { country: "Sudan", value: -80.0, r: 4 },
-                    { country: "Sweden", value: 200.0, r: 2 },
-                    { country: "Taiwan", value: -15.83, r: 22 },
-                    { country: "Tajikistan", value: -100.0, r: 1 },
-                    { country: "Tanzania", value: 500.0, r: 10 },
-                    { country: "Thailand", value: -66.67, r: 8 },
-                    { country: "Trinidad and Tobago", value: 0.0, r: 0 },
-                    { country: "Turkey", value: -6.38, r: 3 },
-                    { country: "Uganda", value: -16.67, r: 1 },
-                    { country: "Ukraine", value: 50.0, r: 1 },
-                    { country: "United Arab Emirates", value: -90.0, r: 9 },
-                    { country: "United Kingdom", value: -7.14, r: 3 },
-                    { country: "Uruguay", value: -100.0, r: 1 },
-                    { country: "Uzbekistan", value: 0.0, r: 0 },
-                    { country: "Venezuela", value: 100.0, r: 2 },
-                    { country: "Vietnam", value: 18.92, r: 14 },
-                    { country: "Zambia", value: 0.0, r: 1 }
+                    { country: "Bangladesh", value: 2.14, r: 4, fall24: 187, fall25: 191 },
+                    { country: "Brazil", value: -2.56, r: 1, fall24: 39, fall25: 38 },
+                    { country: "Canada", value: -21.95, r: 18, fall24: 82, fall25: 64 },
+                    { country: "Chile", value: 5.26, r: 1, fall24: 19, fall25: 20 },
+                    { country: "China", value: 3.8, r: 64, fall24: 1682, fall25: 1746 },
+                    { country: "Colombia", value: -14.29, r: 5, fall24: 35, fall25: 30 },
+                    { country: "Denmark", value: -9.09, r: 2, fall24: 22, fall25: 20 },
+                    { country: "Egypt", value: -8.82, r: 3, fall24: 34, fall25: 31 },
+                    { country: "El Salvador", value: 7.14, r: 1, fall24: 14, fall25: 15 },
+                    { country: "Ethiopia", value: 0.0, r: 0, fall24: 30, fall25: 30 },
+                    { country: "France", value: -44.0, r: 11, fall24: 25, fall25: 14 },
+                    { country: "Germany", value: -48.15, r: 13, fall24: 27, fall25: 14 },
+                    { country: "Ghana", value: -3.06, r: 3, fall24: 98, fall25: 95 },
+                    { country: "Greece", value: -27.78, r: 5, fall24: 18, fall25: 13 },
+                    { country: "Hong Kong", value: -39.13, r: 9, fall24: 23, fall25: 14 },
+                    { country: "India", value: -25.08, r: 779, fall24: 3106, fall25: 2327 },
+                    { country: "Indonesia", value: -36.36, r: 8, fall24: 22, fall25: 14 },
+                    { country: "Iran", value: -6.34, r: 9, fall24: 142, fall25: 133 },
+                    { country: "Italy", value: -16.0, r: 4, fall24: 25, fall25: 21 },
+                    { country: "Japan", value: -32.26, r: 10, fall24: 31, fall25: 21 },
+                    { country: "Mexico", value: -18.52, r: 5, fall24: 27, fall25: 22 },
+                    { country: "Nepal", value: 5.71, r: 4, fall24: 70, fall25: 74 },
+                    { country: "Netherlands", value: -5.26, r: 1, fall24: 19, fall25: 18 },
+                    { country: "Nigeria", value: -7.69, r: 18, fall24: 234, fall25: 216 },
+                    { country: "Pakistan", value: 23.61, r: 17, fall24: 72, fall25: 89 },
+                    { country: "Philippines", value: 23.08, r: 3, fall24: 13, fall25: 10 },
+                    { country: "Russia", value: -30.43, r: 7, fall24: 23, fall25: 16 },
+                    { country: "Saudi Arabia", value: -1.82, r: 1, fall24: 55, fall25: 54 },
+                    { country: "Singapore", value: -40.63, r: 13, fall24: 32, fall25: 19 },
+                    { country: "South Korea", value: -3.94, r: 8, fall24: 203, fall25: 195 },
+                    { country: "Spain", value: 6.58, r: 5, fall24: 76, fall25: 81 },
+                    { country: "Sri Lanka", value: 7.55, r: 4, fall24: 53, fall25: 57 },
+                    { country: "Taiwan", value: -15.83, r: 22, fall24: 139, fall25: 117 },
+                    { country: "Turkey", value: -6.38, r: 3, fall24: 47, fall25: 44 },
+                    { country: "United Kingdom", value: -7.14, r: 3, fall24: 42, fall25: 39 },
+                    { country: "Vietnam", value: 18.92, r: 14, fall24: 74, fall25: 88 }
                 ];
 
                 // ---------------- DIMENSIONS ----------------
                 const container = document.getElementById("bubble-container");
                 const width = container.clientWidth;
                 const height = container.clientHeight;
-                const margin = { top: 40, right: 20, bottom: 40, left: 50 };
+                const margin = { top: 40, right: 20, bottom: 40, left: 120 };
 
                 // ---------------- SVG ----------------
                 const svg = d3.select("#bubble-container").append("svg").attr("width", width).attr("height", height);
@@ -873,12 +815,14 @@
                 // ---------------- SCALES ----------------
                 const y = d3
                     .scaleLinear()
-                    .domain([d3.min(data, (d) => d.value) - 5, d3.max(data, (d) => d.value) + 5])
+                    .domain([d3.min(data, (d) => d.value) - 10, d3.max(data, (d) => d.value) + 10])
                     .range([height - margin.bottom, margin.top]);
 
-                // horizontal center
+                const maxR = d3.max(data, (d) => d.r);
+                const scaleR = d3.scaleLinear().domain([0, maxR]).range([10, 70]);
+
                 const centerX = width / 2;
-                const jitter = 30; // max horizontal offset
+                const jitter = 50;
 
                 // ---------------- GUIDING LINES ----------------
                 svg.append("g")
@@ -887,30 +831,111 @@
                     .data(y.ticks(5))
                     .enter()
                     .append("line")
-                    .attr("x1", centerX - 100)
-                    .attr("x2", centerX + 100)
+                    .attr("x1", centerX - 175)
+                    .attr("x2", centerX + 200)
                     .attr("y1", (d) => y(d))
                     .attr("y2", (d) => y(d))
                     .attr("stroke", "#ccc")
                     .attr("stroke-width", 1)
                     .attr("stroke-dasharray", "4 4");
 
-                // ---------------- Y-AXIS ONLY ----------------
-                svg.append("g").attr("transform", `translate(${margin.left},0)`).call(d3.axisLeft(y));
+                // ---------------- Y-AXIS ----------------
+                const yAxisGroup = svg
+                    .append("g")
+                    .attr("transform", `translate(${margin.left},0)`)
+                    .call(
+                        d3
+                            .axisLeft(y)
+                            .tickValues([-40, -20, 0, 20])
+                            .tickFormat((d) => d + "%")
+                    )
+                    .call((g) => g.selectAll(".tick line").remove())
+                    .selectAll("text")
+                    .style("font-family", "poppins")
+                    .style("font-size", "14px")
+                    .style("fill", (d) => {
+                        if (d > 0) return "#008000"; // green for positive
+                        if (d < 0) return "#C71E1D"; // red for negative
+                        return "#555"; // gray for zero
+                    });
+                // Add labels for top and bottom
+                svg.append("text")
+                    .attr("x", margin.left - 10) // slightly left of axis
+                    .attr("y", margin.top - 10) // above top tick
+                    .attr("text-anchor", "middle")
+                    .style("font-family", "poppins")
+                    .style("font-size", "14px")
+                    .style("fill", "#008000")
+                    .style("font-weight", "600")
+                    .text("▲ More Students");
 
-                // ---------------- BUBBLES ----------------
-                svg.append("g")
+                svg.append("text")
+                    .attr("x", margin.left - 10) // slightly left of axis
+                    .attr("y", height - margin.bottom + 20) // below bottom tick
+                    .attr("text-anchor", "middle")
+                    .style("font-family", "poppins")
+                    .style("font-size", "14px")
+                    .style("fill", "#C71E1D")
+                    .style("font-weight", "600")
+                    .text("▼ Fewer Students");
+
+                // ---------------- INITIAL POSITIONS ----------------
+                data.forEach((d) => {
+                    d.x = centerX + (Math.random() * 2 - 1) * jitter; // jitter on x
+                    d.y = y(d.value); // lock to y position
+                });
+
+                // ---------------- DRAW BUBBLES ----------------
+                const circles = svg
+                    .append("g")
                     .attr("class", "bubbles")
                     .selectAll("circle")
                     .data(data)
                     .enter()
                     .append("circle")
-                    .attr("cx", () => centerX + (Math.random() * 2 - 1) * jitter) // horizontal jitter
-                    .attr("cy", (d) => y(d.value))
-                    .attr("r", (d) => d.r)
-                    .attr("fill", (d) => (d.value >= 0 ? "#008000" : "#C71E1D"))
-                    .attr("stroke", "#333")
-                    .attr("stroke-width", 2);
+                    .attr("r", (d) => scaleR(d.r))
+                    .attr("fill", (d) => (d.value >= 0 ? "#008000" : "#C71E1D"));
+
+                circles.append("title").text((d) => `${d.country}: ${d.value}%`);
+
+                // ---------------- FORCE SIMULATION (NO OVERLAP) ----------------
+                const simulation = d3
+                    .forceSimulation(data)
+                    .force("x", d3.forceX((d) => centerX).strength(0.05))
+                    .force("y", d3.forceY((d) => d.y).strength(1)) // lock vertically
+                    .force(
+                        "collide",
+                        d3.forceCollide((d) => scaleR(d.r) + 2)
+                    )
+                    .on("tick", () => {
+                        circles.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+                    });
+
+                // ----------------- ADD TOOLTIPS ---------------------
+                const tooltip = d3.select("#tooltip");
+                circles
+                    .on("mouseover", function (event, d) {
+                        tooltip.style("opacity", 1).html(
+                            `<h3 style="margin: 0; margin-bottom: 5px; padding: 0; font-size: 18px; font-weight: 700;">${d.country}</h3>
+                            Fall 2024: <b>${d.fall24}</b>
+                            <br>
+                            Fall 2025: <b>${d.fall25}</b>
+                            <hr style="margin: 4px;">
+                            Change: <b>${d.r}</b>
+                            <br>
+                            Percent: <b>${d.value}%</b>`
+                        );
+                        d3.select(this).attr("stroke", "#000").attr("stroke-width", 4);
+                    })
+                    .on("mousemove", function (event, d) {
+                        tooltip
+                            .style("left", event.pageX - 175 + "px") // 110px to left
+                            .style("top", event.pageY - 25 + "px"); // 25px above
+                    })
+                    .on("mouseout", function (event, d) {
+                        tooltip.style("opacity", 0);
+                        d3.select(this).attr("stroke", null);
+                    });
             });
         </script>
     </body>
