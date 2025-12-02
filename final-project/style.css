@@ -18,8 +18,8 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 /* default */
 body {
     margin: 0;
-    font-family: 'Poppins', san-serif;
-    color: black; 
+    font-family: "Poppins", san-serif;
+    color: black;
     scroll-behavior: smooth;
 }
 
@@ -27,7 +27,7 @@ body {
 .topper {
     min-height: 100vh;
     display: flex;
-    background-image: url('topper2.jpg');
+    background-image: url("topper2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,19 +41,19 @@ body {
     width: 100%;
     height: 60px;
     z-index: 5;
-    background: #0D0628;
+    background: #0d0628;
     padding: auto;
 }
 
 #logo {
-  width:270px;
-  padding-left: 50px;
-  padding-top: 4px;
+    width: 270px;
+    padding-left: 50px;
+    padding-top: 4px;
 }
 
 #headline {
     font-family: "Source Serif 4", serif;
-    font-size: 2.80em;
+    font-size: 2.8em;
     font-weight: 700;
     padding-top: 10%;
     padding-left: 50px;
@@ -94,7 +94,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-image: url('map1.png');
+    background-image: url("map1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -125px;
@@ -104,35 +104,35 @@ body {
 }
 
 .section2.bg-alt1 {
-    background-image: url('map2.png'); 
+    background-image: url("map2.png");
 }
 
 .section2.bg-alt2 {
-    background-image: url('map3.png'); 
+    background-image: url("map3.png");
 }
 
 .section2.bg-alt3 {
-    background-image: url('map4.png'); 
+    background-image: url("map4.png");
 }
 
 .section2.bg-alt4 {
-    background-image: url('map5.png'); 
+    background-image: url("map5.png");
 }
 
 .section2.bg-alt5 {
-    background-image: url('map6.png'); 
+    background-image: url("map6.png");
 }
 
 .section2.bg-alt6 {
-    background-image: url('map7.png'); 
+    background-image: url("map7.png");
 }
 
 .section2.bg-alt7 {
-    background-image: url('map8.png'); 
+    background-image: url("map8.png");
 }
 
 .section2.bg-alt8 {
-    background-image: url('map9.png'); 
+    background-image: url("map9.png");
 }
 
 .section2 .card1 {
@@ -143,7 +143,7 @@ body {
     border-radius: 20px;
     text-align: center;
     margin-top: 125px;
-} 
+}
 
 .chart-wrapper {
     position: relative;
@@ -157,8 +157,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;       /* ★ match wrapper exactly */
-    height: 100%;      /* ★ match wrapper exactly */
+    width: 100%; /* ★ match wrapper exactly */
+    height: 100%; /* ★ match wrapper exactly */
     object-fit: contain;
     z-index: 1;
 }
@@ -169,7 +169,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;      /* ★ match wrapper */
+    height: 100%; /* ★ match wrapper */
     z-index: 2;
     pointer-events: auto;
 }
@@ -178,8 +178,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;        /* ★ match wrapper exactly */
-    height: 100%;       /* ★ match wrapper exactly */
+    width: 100%; /* ★ match wrapper exactly */
+    height: 100%; /* ★ match wrapper exactly */
     object-fit: contain;
     z-index: 3;
 }
@@ -194,7 +194,7 @@ body {
 
 button {
     font-size: 0.75em;
-    background-color: #C71E1D;
+    background-color: #c71e1d;
     color: white;
     border-radius: 10px;
     border: none;
@@ -206,13 +206,13 @@ button {
 .section2 .card2 {
     background-color: white;
     padding: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
     width: 50vw;
     border-radius: 20px;
     text-align: center;
-    margin-top: 250px;  /* spacing below card1 */
-    position: static;  /* default */
-} 
+    margin-top: 250px; /* spacing below card1 */
+    position: static; /* default */
+}
 
 .map-chart {
     width: 100%;
@@ -223,48 +223,48 @@ button {
 }
 
 .section2 .maryland-card {
-    background-image: url('maryland-map.png');
+    background-image: url("maryland-map.png");
     background-position: center;
     background-repeat: no-repeat;
     background-color: white;
     padding: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
     width: 50vw;
     border-radius: 20px;
     text-align: center;
-    margin-top: 250px;  /* spacing below card1 */
-    position: static;  /* default */ 
-} 
+    margin-top: 250px; /* spacing below card1 */
+    position: static; /* default */
+}
 
 .section2 .continent-card {
     background-color: rgba(250, 250, 250, 0.85);
     padding: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
     width: 50vw;
     border-radius: 20px;
     text-align: center;
-    margin-top: 250px;  /* spacing below card1 */
-    position: static;  /* default */ 
+    margin-top: 250px; /* spacing below card1 */
+    position: static; /* default */
 }
 
 .section2 .card13 {
     background-color: rgba(250, 250, 250, 1);
     padding: 20px;
-    padding-top: 25px; 
+    padding-top: 25px;
     width: 50vw;
     border-radius: 20px;
     text-align: center;
-    margin-top: 250px;  /* spacing below card1 */
-    position: static;  /* default */ 
+    margin-top: 250px; /* spacing below card1 */
+    position: static; /* default */
 }
 
 #bubble-container {
     background-color: rgba(250, 250, 250, 1);
-    height: 400px;       /* container height */
+    height: 400px; /* container height */
     width: 600px;
     margin: 0 auto;
     display: flex;
-    align-items: center;  /* vertical centering */
+    align-items: center; /* vertical centering */
     justify-content: center; /* optional, horizontal centering */
 }
 
@@ -285,7 +285,7 @@ button {
     opacity: 1 !important;
     width: 55vw;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
     border: none;
     height: 10px;
     background-color: black;
@@ -298,6 +298,7 @@ button {
     margin-right: auto;
 }
 
-.section3 #caption2, .section3 #caption3 {
+.section3 #caption2,
+.section3 #caption3 {
     font-size: 0.75em;
 }
