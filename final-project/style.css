@@ -23,11 +23,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* topper */
+/* -------------------------topper---------------------- */
 .topper {
     min-height: 100vh;
     display: flex;
-    background-image: url('topper1.jpg');
+    background-image: url('topper2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,8 +53,8 @@ body {
 
 #headline {
     font-family: "Source Serif 4", serif;
-    font-size: 2.75em;
-    font-weight: 600;
+    font-size: 2.80em;
+    font-weight: 700;
     padding-top: 10%;
     padding-left: 50px;
 }
@@ -66,7 +66,7 @@ body {
     font-size: 1em;
 }
 
-/* section1 */
+/* -------------------------Section 1---------------------- */
 #caption1 {
     font-size: 0.75em;
     margin-left: 10px;
@@ -87,30 +87,105 @@ body {
     padding-bottom: 25px;
 }
 
-/* section2 */
+/* -------------------------Section 2---------------------- */
 .section2 {
-    min-height: 100vh;
+    min-height: 1235vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     background-image: url('map1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -125px;
-    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    transition: background-image 0.6s ease-in-out;
 }
 
-.section2 div {
+.section2.bg-alt1 {
+    background-image: url('map2.png'); 
+}
+
+.section2.bg-alt2 {
+    background-image: url('map3.png'); 
+}
+
+.section2.bg-alt3 {
+    background-image: url('map4.png'); 
+}
+
+.section2.bg-alt4 {
+    background-image: url('map5.png'); 
+}
+
+.section2.bg-alt5 {
+    background-image: url('map6.png'); 
+}
+
+.section2.bg-alt6 {
+    background-image: url('map7.png'); 
+}
+
+.section2.bg-alt7 {
+    background-image: url('map8.png'); 
+}
+
+.section2.bg-alt8 {
+    background-image: url('map9.png'); 
+}
+
+.section2 .card1 {
     background-color: white;
-    position: absolute;
     padding: 10px;
     padding-bottom: 15px;
-    align-self: center;
     width: 50vw;
     border-radius: 20px;
     text-align: center;
+    margin-top: 125px;
 } 
 
-#chart1 {
+.chart-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
     height: 40vh;
+    overflow: hidden;
+}
+
+#chart1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;       /* ★ match wrapper exactly */
+    height: 100%;      /* ★ match wrapper exactly */
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* put the canvas exactly over the img */
+#drawLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;      /* ★ match wrapper */
+    z-index: 2;
+    pointer-events: auto;
+}
+
+#chart1-answer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;        /* ★ match wrapper exactly */
+    height: 100%;       /* ★ match wrapper exactly */
+    object-fit: contain;
+    z-index: 3;
+}
+
+.hidden {
+    display: none;
 }
 
 #chart1-caption {
@@ -124,4 +199,105 @@ button {
     border-radius: 10px;
     border: none;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section2 .card2 {
+    background-color: white;
+    padding: 20px;
+    padding-top: 25px; 
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 250px;  /* spacing below card1 */
+    position: static;  /* default */
+} 
+
+.map-chart {
+    width: 100%;
+}
+
+.map-continent {
+    width: 60%;
+}
+
+.section2 .maryland-card {
+    background-image: url('maryland-map.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 20px;
+    padding-top: 25px; 
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 250px;  /* spacing below card1 */
+    position: static;  /* default */ 
+} 
+
+.section2 .continent-card {
+    background-color: rgba(250, 250, 250, 0.85);
+    padding: 20px;
+    padding-top: 25px; 
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 250px;  /* spacing below card1 */
+    position: static;  /* default */ 
+}
+
+.section2 .card13 {
+    background-color: rgba(250, 250, 250, 1);
+    padding: 20px;
+    padding-top: 25px; 
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 250px;  /* spacing below card1 */
+    position: static;  /* default */ 
+}
+
+#bubble-container {
+    background-color: rgba(250, 250, 250, 1);
+    height: 400px;       /* container height */
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;  /* vertical centering */
+    justify-content: center; /* optional, horizontal centering */
+}
+
+/* -------------------------Section 3---------------------- */
+.section3 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section3 p {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section3 hr {
+    opacity: 1 !important;
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;  
+    border: none;
+    height: 10px;
+    background-color: black;
+}
+
+.section3 img {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section3 #caption2, .section3 #caption3 {
+    font-size: 0.75em;
 }

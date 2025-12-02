@@ -141,19 +141,777 @@
                 The International Trade Administration reported a 19.1% in F-1 arrivals this August.
             </p>
         </section>
-        
+
         <section class="section2">
-            <div>
-                <p><b>Maryland as a whole has started to see a decline in international<br>student enrollment, especially in the Fall semester</b></p>
-                <img src="chart1.png" id="chart1">
-                <p id="chart1-caption">Do you wanna guess how number gone down<br>this Fall? Feel free the draw the rest of a line chart.</p>
-                <button>Or click here for the answer</button>
+            <div class="card1">
+                <p>
+                    <b
+                        >Maryland as a whole has started to see a decline in international<br />student enrollment,
+                        especially in the Fall semester</b
+                    >
+                </p>
+
+                <div class="chart-wrapper">
+                    <img src="chart1.png" id="chart1" />
+                    <canvas id="drawLayer"></canvas>
+                    <!-- Answer image -->
+                    <img src="chart1-answer.png" id="chart1-answer" class="hidden" />
+                </div>
+
+                <p id="chart1-caption">
+                    Do you want to guess how number went down in Fall 2025?<br />Feel free the draw the rest of a line
+                    chart.
+                </p>
+                <button id="showAnswerBtn">Or click here for the answer</button>
+            </div>
+
+            <div class="card2">
+                <p>
+                    CNS analysed the data of over 38,000 international students’ enrollment between 2020 and 2025 from
+                    five major Maryland public universities–University of Maryland, College Park, University of
+                    Maryland, Baltimore County, Towson University, Salisbury University and Frostburg State University
+                </p>
+                <p>
+                    <em
+                        >[*This data set represents all international student enrollment, not new international students
+                        each year, and the University of Maryland, College Park and Towson University do not disclose
+                        the number of students from countries that have fewer than 10 enrollments.]</em
+                    >
+                </p>
+            </div>
+
+            <div class="card3 maryland-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Some universities, including the University of Maryland, College Park, and the University of
+                            Maryland, Baltimore County, which account for approximately 90% of international students in
+                            this dataset, showed a significant decline in enrollment for Fall 2025.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-umd.png" class="map-chart" />
+                        <p>University of Maryland, College Park</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-umbc.png" class="map-chart" />
+                        <p>University of Maryland, Baltimore County</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card4 maryland-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Other universities, such as Salisbury University and Frostburg State University, actually
+                            showed an increase in enrollment at a slower pace.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-salis.png" class="map-chart" />
+                        <p>Salisbury University</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-frostburg.png" class="map-chart" />
+                        <p>Frostburg State University</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card5 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Student enrollment from each continent illustrated the common trend.</p>
+                        <p>
+                            The number of Asian students decreased from Fall 2023 to Fall 2024,<br />and had a larger
+                            drop in Fall 2025.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="chart-asia.png" class="map-chart map-continent" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card6 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            While the number of students from most Asian countries, including India, declined, the
+                            number of students from a few countries, like China, increased.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-india.png" class="map-chart" />
+                        <p>India</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-china.png" class="map-chart" />
+                        <p>China</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card7 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            European students’ enrollment had been increasing since 2020, with a small drop in Fall
+                            2023, followed by a larger decline in Fall 2025.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="chart-eu.png" class="map-chart map-continent" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card8 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Most European countries followed this trend, except for a few, such as Spain, where the
+                            number continued to grow.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-germany.png" class="map-chart" />
+                        <p>Germany</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-spain.png" class="map-chart" />
+                        <p>Spain</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card9 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            The enrollment of foreign students from North and South America also saw a significant
+                            decline in Fall 2025.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="chart-america.png" class="map-chart map-continent" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card10 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Most countries in the continent followed this pattern, except for a few, such as El
+                            Salvador, where the number of students slightly increased.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-canada.png" class="map-chart" />
+                        <p>Canada</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-elsalvador.png" class="map-chart" />
+                        <p>El Salvador</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card11 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>African students’ enrollment dropped for the first time in six years,</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="chart-africa.png" class="map-chart map-continent" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card12 continent-card">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            including students from Nigeria and Ghana, who accounted for the majority of international
+                            African students in the data.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="chart-nigeria.png" class="map-chart" />
+                        <p>Nigeria</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="chart-ghana.png" class="map-chart" />
+                        <p>Ghana</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card13">
+                <p>
+                    <b>NEW SUMMARY GO HERE...</b>
+                </p>
+                <div id="bubble-container"></div>
             </div>
         </section>
-        
-        
-        
-        
-        
+
+        <section class="section3">
+            <p>
+                Most international students in the United States are graduate students. Many come here for research
+                institutions that have far more resources than their foreign counterparts. That’s why the
+                <b>researcher</b>
+                from Colombia said she came here four years ago as a master’s student. 
+            </p>
+            <p>She was working in Colombia for a non-governmental organization and needed some data for a project. </p>
+            <p>
+                “My supervisor at the time, she said, ‘oh, check this website, this lab’... And I was like, oh, ok,
+                that's so cool that they have the entire world, and it's free,” she said. 
+            </p>
+            <p style="margin-bottom: 35px">
+                She was impressed and when she got her acceptance letter, she said she was excited to be part of that
+                impressive work. In addition to research and academics, she got life experiences she wouldn’t have
+                otherwise. 
+            </p>
+            <hr />
+            <p style="color: #c71e1d; font-size: 30px">
+                "What are the chances besides the university or through the university that I would meet a girl from a
+                small city in China. I have never been in China. She has never been in Colombia,"
+                <span style="font-size: 18px">Columbian researcher said.</span>
+            </p>
+            <hr />
+            <p style="margin-top: 35px">
+                She’d begun to build a life here and hadn’t thought that four years later she’d have to leave the way
+                she did; <b>with</b> just a couple months to wrap up her life.
+            </p>
+            <p>
+                She finished her <b>master’s degree at the University of Maryland in 2022</b> and started what is known
+                as optional practical training – a kind of F-1 extension that allows students to work in their field
+                after graduation – when she started working <b>at the university</b>. She was supposed to have another
+                five months to work on research, to make money and figure out her next move. 
+            </p>
+            <p>
+                “I'm still processing like, okay, this is over. And even like all the things that I have, collecting and
+                buying over these four years, now I just feel like I have one month to get rid of them,” she said. 
+            </p>
+            <p>
+                <b>Her official title was faculty specialist</b>. Her job included developing curriculum, supervising
+                graduate students, supporting and conducting research that now has to stop.
+            </p>
+            <p style="margin-bottom: 35px">
+                “I don't think I would have the equipment. I don't have the data. I don't have the computer power to run
+                those processes. So I think that research, that project died. It's over,” she said. 
+            </p>
+            <img src="picmock20.png" />
+            <p id="caption2">Caption go here....</p>
+            <p style="margin-top: 35px">
+                Having a hard deadline for F-1 visas means lost momentum for a lot of international students, especially
+                for doctorate degrees, which – according to the National Center for Science and Engineering Statistics –
+                take a median of 5.7 years to complete.
+            </p>
+            <p>
+                In its comment against the administration’s visa proposal, the University of Maryland said the new
+                policy takes discretionary power away from universities, an argument Georgetown University
+                <a href="https://georgetown.app.box.com/s/mac1jso91iahiyaobdlrfblshurgi4bo" target="_blank"
+                    >reiterated</a
+                >
+                in its comment.
+            </p>
+            <p>
+                “The ability of PhD students to complete their studies will be in the hands of (U.S. Citizenship and
+                Immigration Services) and not their higher education institution,” wrote Susan Dougherty, the University
+                of Maryland’s director of International Students and Scholars Services. 
+            </p>
+            <p>
+                With less time on their visas, international students said they have felt pressured to rush their
+                degrees <b>which</b> can have serious consequences for a career in their chosen field.
+            </p>
+            <p>
+                “ If you rush to finish your PhD then it's possible that like you didn't get to publish (research) while
+                you were doing your PhD. And not being able to publish your PhD work while you're doing your PhD usually
+                means that it's a lot harder for you to publish afterwards,” said a <b>fourth-year</b> doctoral student
+                <b>at the University of Maryland</b>, also on a foreign student visa. She asked not to be identified. 
+            </p>
+            <p>
+                This doesn’t just affect doctoral students. The National Center for Educational Statistics says the
+                median time to complete a bachelor’s degree is 4.3 years. Dual majors and joint undergraduate-graduate
+                programs can take even longer. 
+            </p>
+            <p style="margin-bottom: 35px">
+                The administration’s proposed policy would also prohibit students from changing educational objectives,
+                including transferring or changing a field of study. The University of Maryland said that this shows a
+                misunderstanding of graduate education where students often shift focus, move labs or move with advisors
+                as their education progresses.  
+            </p>
+            <img src="pic2.jpg" />
+            <p id="caption3">Caption go here....</p>
+            <p style="margin-top: 35px">
+                “There's already situations on campus where labs are kind of toxic environments for one reason or
+                another, and switching labs has saved people's careers,” said Ying, who is currently a sixth-year
+                doctoral candidate at Maryland.
+            </p>
+            <p>
+                Universities worry that these constraints take away the flexibility that make the U.S. so attractive to
+                international students. While these changes to F-1 visas have not been implemented yet, many other
+                policies affecting international students have.
+            </p>
+            <p>
+                The American Association of University Women sponsors around 60 women to study in the United States. The
+                organization encountered issues this year during a
+                <a
+                    href="https://www.politico.com/news/2025/05/27/trump-team-orders-stop-to-new-student-visa-interviews-as-it-weighs-expanding-social-media-vetting-00370501"
+                    target="_blank"
+                    >visa interview pause</a
+                >
+                <b>imposed by the Trump administration</b> in May.
+            </p>
+            <p>
+                “A number ended up having to defer their fellowship to next year. And many ended up just declining them
+                entirely after the delays just continued to cascade and they knew that they didn't have a chance,” said
+                AAUW CEO Gloria Blackwell.
+            </p>
+            <p>
+                Blackwell said that even when fellows did arrive at their host universities, their research and studies
+                were affected by funding cuts.
+            </p>
+            <p>
+                <b
+                    >“I feel like in some way, also, the US is losing some …high qualified professionals,” said the
+                    researcher from Colombia.</b
+                >
+            </p>
+            <p style="margin-bottom: 35px">
+                <b
+                    >She said that international students already have to prove themselves – adapting to a new system,
+                    new country, new language – and get important training from the U.S. She said that these new
+                    policies are unfair and result in the U.S. losing knowledge from these students.</b
+                > 
+            </p>
+            <hr />
+            <p style="color: #c71e1d; font-size: 30px">
+                "I didn't grow up here – I didn't – I wasn't born here but I chose to be here,"
+                <span style="font-size: 18px">she said.</span>
+            </p>
+            <hr />
+        </section>
+
+        <script>
+            // Allow drawing on canvas and make its size match chart 1
+            window.addEventListener("load", () => {
+                const img = document.getElementById("chart1");
+                const canvas = document.getElementById("drawLayer");
+                const ctx = canvas.getContext("2d");
+
+                // Size canvas to match the displayed image
+                function resizeCanvas() {
+                    canvas.width = img.clientWidth;
+                    canvas.height = img.clientHeight;
+                }
+
+                resizeCanvas();
+                window.addEventListener("resize", resizeCanvas);
+
+                let drawing = false;
+
+                canvas.addEventListener("mousedown", (e) => {
+                    drawing = true;
+                    ctx.beginPath();
+                    const rect = canvas.getBoundingClientRect();
+                    ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+                });
+
+                canvas.addEventListener("mouseup", () => (drawing = false));
+                canvas.addEventListener("mouseleave", () => (drawing = false));
+
+                canvas.addEventListener("mousemove", (e) => {
+                    if (!drawing) return;
+                    const rect = canvas.getBoundingClientRect();
+
+                    ctx.lineWidth = 3;
+                    ctx.lineCap = "round";
+                    ctx.strokeStyle = "red";
+
+                    ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+                    ctx.stroke();
+                });
+            });
+
+            // click the button to show answer picture
+            document.getElementById("showAnswerBtn").addEventListener("click", () => {
+                // hide original image + drawing canvas
+                document.getElementById("chart1").style.display = "none";
+                document.getElementById("drawLayer").style.display = "none";
+
+                // show the answer image
+                document.getElementById("chart1-answer").classList.remove("hidden");
+            });
+
+            // change background from map1 to map2 when scrolling reach card5
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card5");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt1");
+                            } else {
+                                section.classList.remove("bg-alt1");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map2 to map3 when scrolling reach card6
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card6");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt2");
+                            } else {
+                                section.classList.remove("bg-alt2");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map3 to map4 when scrolling reach card7
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card7");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt3");
+                            } else {
+                                section.classList.remove("bg-alt3");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map4 to map5 when scrolling reach card8
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card8");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt4");
+                            } else {
+                                section.classList.remove("bg-alt4");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map5 to map6 when scrolling reach card9
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card9");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt5");
+                            } else {
+                                section.classList.remove("bg-alt5");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map6 to map7 when scrolling reach card10
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card10");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt6");
+                            } else {
+                                section.classList.remove("bg-alt6");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map7 to map8 when scrolling reach card11
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card11");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt7");
+                            } else {
+                                section.classList.remove("bg-alt7");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+
+            // change background from map8 to map9 when scrolling reach card12
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".section2");
+                const card5 = document.querySelector(".card12");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("bg-alt8");
+                            } else {
+                                section.classList.remove("bg-alt8");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25 // 25% visible before switching
+                    }
+                );
+                observer.observe(card5);
+            });
+        </script>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // ---------------- DATA ----------------
+                const data = [
+                    { country: "Afghanistan", value: 100.0, r: 1 },
+                    { country: "Albania", value: 0.0, r: 0 },
+                    { country: "Algeria", value: -50.0, r: 1 },
+                    { country: "Argentina", value: -75.0, r: 9 },
+                    { country: "Armenia", value: 100.0, r: 1 },
+                    { country: "Australia", value: -88.24, r: 15 },
+                    { country: "Austria", value: 0.0, r: 0 },
+                    { country: "Azerbaijan", value: -100.0, r: 13 },
+                    { country: "Bahamas", value: 100.0, r: 1 },
+                    { country: "Bangladesh", value: 2.14, r: 4 },
+                    { country: "Belgium", value: -100.0, r: 1 },
+                    { country: "Benin", value: 100.0, r: 1 },
+                    { country: "Bermuda", value: -50.0, r: 1 },
+                    { country: "Bosnia and Herzegovina", value: 0.0, r: 0 },
+                    { country: "Botswana", value: 100.0, r: 1 },
+                    { country: "Brazil", value: -2.56, r: 1 },
+                    { country: "Bulgaria", value: 0.0, r: 0 },
+                    { country: "Burkina Faso", value: -100.0, r: 1 },
+                    { country: "Cameroon", value: -20.0, r: 2 },
+                    { country: "Canada", value: -21.95, r: 18 },
+                    { country: "Chile", value: 5.26, r: 1 },
+                    { country: "China", value: 3.8, r: 64 },
+                    { country: "Colombia", value: -14.29, r: 5 },
+                    { country: "Congo", value: -25.0, r: 1 },
+                    { country: "Costa Rica", value: -100.0, r: 1 },
+                    { country: "Croatia", value: -100.0, r: 5 },
+                    { country: "Cyprus", value: 0.0, r: 0 },
+                    { country: "Czech Republic", value: 50.0, r: 1 },
+                    { country: "Denmark", value: -9.09, r: 2 },
+                    { country: "Dominican Republic", value: -50.0, r: 2 },
+                    { country: "Ecuador", value: 33.33, r: 1 },
+                    { country: "Egypt", value: -8.82, r: 3 },
+                    { country: "El Salvador", value: 7.14, r: 1 },
+                    { country: "Ethiopia", value: 0.0, r: 0 },
+                    { country: "France", value: -44.0, r: 11 },
+                    { country: "Gambia", value: -100.0, r: 1 },
+                    { country: "Georgia", value: 0.0, r: 0 },
+                    { country: "Germany", value: -48.15, r: 13 },
+                    { country: "Ghana", value: -3.06, r: 3 },
+                    { country: "Greece", value: -27.78, r: 5 },
+                    { country: "Grenada", value: -66.67, r: 2 },
+                    { country: "Guatemala", value: 25.0, r: 1 },
+                    { country: "Guyana", value: 0.0, r: 0 },
+                    { country: "Haiti", value: 0.0, r: 0 },
+                    { country: "Honduras", value: -14.29, r: 1 },
+                    { country: "Hong Kong", value: -39.13, r: 9 },
+                    { country: "Hungary", value: -75.0, r: 3 },
+                    { country: "India", value: -25.08, r: 779 },
+                    { country: "Indonesia", value: -36.36, r: 8 },
+                    { country: "Iran", value: -6.34, r: 9 },
+                    { country: "Ireland", value: -100.0, r: 1 },
+                    { country: "Israel", value: 50.0, r: 1 },
+                    { country: "Italy", value: -16.0, r: 4 },
+                    { country: "Ivory Coast", value: -33.33, r: 1 },
+                    { country: "Jamaica", value: -10.0, r: 1 },
+                    { country: "Japan", value: -32.26, r: 10 },
+                    { country: "Jordan", value: -33.33, r: 1 },
+                    { country: "Kazakhstan", value: 0.0, r: 0 },
+                    { country: "Kenya", value: -50.0, r: 2 },
+                    { country: "Kosovo", value: 0.0, r: 0 },
+                    { country: "Lesotho", value: -50.0, r: 1 },
+                    { country: "Liberia", value: -50.0, r: 1 },
+                    { country: "Lithuania", value: -33.33, r: 1 },
+                    { country: "Malawi", value: -52.94, r: 9 },
+                    { country: "Malaysia", value: -100.0, r: 12 },
+                    { country: "Mexico", value: -18.52, r: 5 },
+                    { country: "Moldova", value: 0.0, r: 0 },
+                    { country: "Morocco", value: 0.0, r: 0 },
+                    { country: "Myanmar", value: 25.0, r: 2 },
+                    { country: "Nepal", value: 5.71, r: 4 },
+                    { country: "Netherlands", value: -5.26, r: 1 },
+                    { country: "New Zealand", value: -100.0, r: 1 },
+                    { country: "Nicaragua", value: -50.0, r: 1 },
+                    { country: "Nigeria", value: -7.69, r: 18 },
+                    { country: "Norway", value: 0.0, r: 0 },
+                    { country: "Pakistan", value: 23.61, r: 17 },
+                    { country: "Palestine", value: 0.0, r: 0 },
+                    { country: "Panama", value: -100.0, r: 1 },
+                    { country: "Peru", value: 60.0, r: 3 },
+                    { country: "Philippines", value: -23.08, r: 3 },
+                    { country: "Russia", value: -30.43, r: 7 },
+                    { country: "Rwanda", value: 0.0, r: 0 },
+                    { country: "Saint Kitts and Nevis", value: -100.0, r: 1 },
+                    { country: "Saudi Arabia", value: -1.82, r: 1 },
+                    { country: "Senegal", value: -100.0, r: 3 },
+                    { country: "Serbia", value: 0.0, r: 0 },
+                    { country: "Singapore", value: -40.63, r: 13 },
+                    { country: "South Africa", value: 0.0, r: 0 },
+                    { country: "South Korea", value: -3.94, r: 8 },
+                    { country: "Spain", value: 6.58, r: 5 },
+                    { country: "Sri Lanka", value: 7.55, r: 4 },
+                    { country: "St Vincent and the Grenadines", value: -100.0, r: 2 },
+                    { country: "Sudan", value: -80.0, r: 4 },
+                    { country: "Sweden", value: 200.0, r: 2 },
+                    { country: "Taiwan", value: -15.83, r: 22 },
+                    { country: "Tajikistan", value: -100.0, r: 1 },
+                    { country: "Tanzania", value: 500.0, r: 10 },
+                    { country: "Thailand", value: -66.67, r: 8 },
+                    { country: "Trinidad and Tobago", value: 0.0, r: 0 },
+                    { country: "Turkey", value: -6.38, r: 3 },
+                    { country: "Uganda", value: -16.67, r: 1 },
+                    { country: "Ukraine", value: 50.0, r: 1 },
+                    { country: "United Arab Emirates", value: -90.0, r: 9 },
+                    { country: "United Kingdom", value: -7.14, r: 3 },
+                    { country: "Uruguay", value: -100.0, r: 1 },
+                    { country: "Uzbekistan", value: 0.0, r: 0 },
+                    { country: "Venezuela", value: 100.0, r: 2 },
+                    { country: "Vietnam", value: 18.92, r: 14 },
+                    { country: "Zambia", value: 0.0, r: 0 }
+                ];
+
+                // ---------------- DIMENSIONS ----------------
+                const container = document.getElementById("bubble-container");
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                const margin = { top: 40, right: 20, bottom: 40, left: 50 };
+
+                // ---------------- SVG ----------------
+                const svg = d3.select("#bubble-container").append("svg").attr("width", width).attr("height", height);
+
+                // ---------------- SCALES ----------------
+                const y = d3
+                    .scaleLinear()
+                    .domain([d3.min(data, (d) => d.value) - 5, d3.max(data, (d) => d.value) + 5])
+                    .range([height - margin.bottom, margin.top]);
+
+                // horizontal center
+                const centerX = width / 2;
+                const jitter = 30; // max horizontal offset
+
+                // ---------------- GUIDING LINES ----------------
+                svg.append("g")
+                    .attr("class", "guides")
+                    .selectAll("line")
+                    .data(y.ticks(5))
+                    .enter()
+                    .append("line")
+                    .attr("x1", centerX - 100)
+                    .attr("x2", centerX + 100)
+                    .attr("y1", (d) => y(d))
+                    .attr("y2", (d) => y(d))
+                    .attr("stroke", "#ccc")
+                    .attr("stroke-width", 1)
+                    .attr("stroke-dasharray", "4 4");
+
+                // ---------------- Y-AXIS ONLY ----------------
+                svg.append("g").attr("transform", `translate(${margin.left},0)`).call(d3.axisLeft(y));
+
+                // ---------------- BUBBLES ----------------
+                svg.append("g")
+                    .attr("class", "bubbles")
+                    .selectAll("circle")
+                    .data(data)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", () => centerX + (Math.random() * 2 - 1) * jitter) // horizontal jitter
+                    .attr("cy", (d) => y(d.value))
+                    .attr("r", (d) => d.r)
+                    .attr("fill", (d) => (d.value >= 0 ? "#008000" : "#C71E1D"))
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 2);
+            });
+        </script>
     </body>
 </html>
