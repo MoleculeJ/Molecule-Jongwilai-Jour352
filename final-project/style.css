@@ -326,5 +326,133 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
         height: 600px; /* container height */
         width: 850px;
     }
+}
+
+@media (max-width: 576px) {
+    /* section 1 */
+    #headline {
+        font-size: 2.1em;
+        padding-top: 20%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    #disclaimer {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 20px;
+        font-size: 0.75em;
+    }
+    
+    #caption1 {
+        font-size: 0.5em;
+        margin-left: 7px;
+    }
+    
+    #byline {
+        font-size: 0.75em;
+    }
+
+    .section1 p {
+        width: 90vw;
+    }
+
+    .section1 {
+        padding-bottom: 25px;
+    }
+    
+    /* section 2 */
+    .section2 {
+        min-height: 1250vh;
+        background-image: url("map-mobile1.png");
+        background-position: center;
+    }
+
+    .section2.bg-alt1 {
+        background-image: url("map-mobile2.png");
+    }
+
+    .section2.bg-alt2 {
+        background-image: url("map-mobile3.png");
+    }
+
+    .section2.bg-alt3 {
+        background-image: url("map-mobile4.png");
+    }
+
+    .section2.bg-alt4 {
+        background-image: url("map-mobile5.png");
+    }
+
+    .section2.bg-alt5 {
+        background-image: url("map-mobile6.png");
+    }
+
+    .section2.bg-alt6 {
+        background-image: url("map-mobile7.png");
+    }
+
+    .section2.bg-alt7 {
+        background-image: url("map-mobile8.png");
+    }
+
+    .section2.bg-alt8 {
+        background-image: url("map-mobile9.png");
+    }
+
+    .section2 .card1 {
+        width: 90vw;
+    }
+    
+    .section2 .card2 {
+        width: 90vw;
+    }
+
+    .map-chart {
+        width: 100%;
+    }
+
+    .map-continent {
+        width: 100%;
+    }
+
+    .section2 .maryland-card {
+        width: 90vw;
+    }
+
+    .section2 .continent-card {
+        width: 90vw;
+    }
+
+    .section2 .card13 {
+        width: 90vw;
+        margin-bottom: 150px;
+    }
+
+    #bubble-container {
+        width: 325px;
+    }
+    
+    /* section 3 */
+    .section3 p {
+        width: 90vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section3 hr {
+        width: 90vw;
+    }
+
+    .section3 img {
+        width: 100vw;
+    }
+
+    .section3 #caption2,
+    .section3 #caption3 {
+        font-size: 0.5em;
+    }
+    
     
 }
