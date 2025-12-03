@@ -366,6 +366,8 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
         min-height: 2500px;
         background-image: url("map-mobile1-test1.png");
         background-position: center;
+        background-attachment: scroll !important;
+        background-size: contain;   /* optional but often better */
     }
 
     .section2.bg-alt1 {
