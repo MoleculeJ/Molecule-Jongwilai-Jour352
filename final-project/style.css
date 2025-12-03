@@ -328,7 +328,7 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     /* section1 */
     #headline {
         padding-right: 50px;
