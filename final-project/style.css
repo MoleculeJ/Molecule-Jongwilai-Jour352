@@ -363,7 +363,7 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     
     /* section 2 */
     .section2 {
-        min-height: 1250vh;
+        min-height: 2500px;
         background-image: url("map-mobile1-test1.png");
         background-position: center;
     }
