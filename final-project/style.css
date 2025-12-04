@@ -28,7 +28,7 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     .topper {
         min-height: 100vh;
         display: flex;
-        background-image: url("topper2.jpg");
+        background-image: url("topper3.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -52,19 +52,28 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
         padding-top: 4px;
     }
 
-    #headline {
-        font-family: "Source Serif 4", serif;
-        font-size: 2.8em;
-        font-weight: 700;
-        padding-top: 10%;
-        padding-left: 50px;
+    .topper-content {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.25);
+        height: auto;
+        width: 60vw;
+        margin-top: 100px;
+        margin-left: 50px;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
     }
 
-    #disclaimer {
+    #headline {
+        font-family: "Sans serif", serif;
+        font-size: 2.8em;
+        font-weight: 700;
+    }
+
+    #subhead {
         font-family: "Poppins", sans-serif;
-        padding-left: 50px;
-        margin-top: 20px;
         font-size: 1em;
+        font-weight: 500;
     }
 
     /* -------------------------Section 1---------------------- */
@@ -92,7 +101,7 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 
     /* -------------------------Section 2---------------------- */
     .section2 {
-        min-height: 1250vh;
+        min-height: 1000vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -136,6 +145,23 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 
     .section2.bg-alt8 {
         background-image: url("map9.png");
+    }
+
+    /* Preload all background images to prevent flashing */
+    .preload {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        background:
+            url("map2.png") no-repeat -9999px -9999px,
+            url("map3.png") no-repeat -9999px -9999px,
+            url("map4.png") no-repeat -9999px -9999px,
+            url("map5.png") no-repeat -9999px -9999px,
+            url("map6.png") no-repeat -9999px -9999px,
+            url("map7.png") no-repeat -9999px -9999px,
+            url("map8.png") no-repeat -9999px -9999px,
+            url("map9.png") no-repeat -9999px -9999px;
     }
 
     .section2 .card1 {
@@ -212,9 +238,9 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
         padding-top: 25px;
         width: 50vw;
         border-radius: 20px;
-        text-align: center;
         margin-top: 250px; /* spacing below card1 */
         position: static; /* default */
+        text-align: left;
     }
 
     .map-chart {
@@ -258,6 +284,7 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
         border-radius: 20px;
         text-align: center;
         margin-top: 250px; /* spacing below card1 */
+        margin-bottom: 150px;
         position: static; /* default */
     }
 
@@ -309,9 +336,12 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 }
 
 @media (min-width: 1920px) {
+    .topper-content {
+        padding: 30px;
+    }
+    
     #headline {
         font-size: 5em;
-        padding-left: 150px;
     }
 
     #disclaimer {
@@ -330,6 +360,10 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 
 @media (max-width: 768px) {
     /* section1 */
+    .topper-content {
+        width: 80vw;
+    }
+    
     #headline {
         padding-right: 50px;
     }
@@ -342,8 +376,53 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     .section2 {
         min-height: 850vh;
         background-position: center;
+        background-image: url("grey-bg.png");
+    }
+    
+    .section2.bg-alt1 {
+        background-image: url("grey-bg.png");
     }
 
+    .section2.bg-alt2 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt3 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt4 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt5 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt6 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt7 {
+        background-image: url("grey-bg.png");
+    }
+
+    .section2.bg-alt8 {
+        background-image: url("grey-bg.png");
+    }
+    
+    .preload {
+        background:
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px;
+    }
+    
     .section2 .card1 {
         width: 75vw;
     }
@@ -388,18 +467,18 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
 
 @media (max-width: 576px) {
     /* section 1 */
+    .topper-content {
+        width: 90vw;
+        margin-left: 20px;
+        padding: 15px;}
+    
     #headline {
-        font-size: 2.1em;
-        padding-top: 20%;
-        padding-left: 30px;
-        padding-right: 30px;
+        font-size: 2em;
     }
 
-    #disclaimer {
-        padding-left: 30px;
-        padding-right: 30px;
+    #subhead {
         margin-top: 20px;
-        font-size: 0.75em;
+        font-size: 0.85em;
     }
 
     #caption1 {
@@ -422,40 +501,52 @@ BYLINE, DATELINE, AND ALL LABELS: Poppins
     /* section 2 */
     .section2 {
         min-height: 1250vh;
-        background-image: url("map-mobile1.png");
+        background-image: url("grey-bg.png");
         background-position: center;
     }
 
     .section2.bg-alt1 {
-        background-image: url("map-mobile2.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt2 {
-        background-image: url("map-mobile3.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt3 {
-        background-image: url("map-mobile4.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt4 {
-        background-image: url("map-mobile5.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt5 {
-        background-image: url("map-mobile6.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt6 {
-        background-image: url("map-mobile7.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt7 {
-        background-image: url("map-mobile8.png");
+        background-image: url("grey-bg.png");
     }
 
     .section2.bg-alt8 {
-        background-image: url("map-mobile9.png");
+        background-image: url("grey-bg.png");
+    }
+    
+    .preload {
+        background:
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px,
+            url("grey-bg.png") no-repeat -9999px -9999px;
     }
 
     .section2 .card1 {
